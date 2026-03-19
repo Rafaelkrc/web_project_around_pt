@@ -74,18 +74,32 @@
           <h3 class="popup__title">Editar perfil</h3>
           <form class="popup__form" id="edit-profile-form">
             <input
+              id="name"
               class="popup__input popup__input_type_name"
               name="name"
               placeholder="Nome"
               type="text"
+              required
+              minlength="2"
+              maxlength="40"
             />
+            <span id="name-error" class="popup__error"
+              >Preencha esse campo.</span
+            >
             <input
+              id="about"
               class="popup__input popup__input_type_description"
               name="description"
               placeholder="Sobre mim"
               type="text"
+              required
+              minlength="2"
+              maxlength="200"
             />
-            <button class="button popup__button" type="submit">Salvar</button>
+            <span id="about-error" class="popup__error"></span>
+            <button class="button popup__button" type="submit" disabled>
+              Salvar
+            </button>
           </form>
         </div>
       </div>
@@ -99,20 +113,28 @@
           <h3 class="popup__title">Novo local</h3>
           <form class="popup__form" id="new-card-form">
             <input
+              id="card-title"
               class="popup__input popup__input_type_card-name"
               name="place-name"
               placeholder="Título"
               required
               type="text"
+              minlength="2"
+              maxlength="30"
             />
+            <span id="card-title-error" class="popup__error"></span>
             <input
+              id="card-link"
               class="popup__input popup__input_type_url"
               name="link"
               placeholder="Link de Imagem"
               required
               type="url"
             />
-            <button class="button popup__button" type="submit">Criar</button>
+            <span id="card-link-error" class="popup__error"></span>
+            <button class="button popup__button" type="submit" disabled>
+              Criar
+            </button>
           </form>
         </div>
       </div>
